@@ -1,0 +1,6 @@
+.nav-border-gradient {
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-image: linear-gradient(45deg, rgb(0 255 185), rgb(66 195 250)) 1;
+    box-shadow: 1px 3px 5px #b5b5b5;
+}
