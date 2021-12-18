@@ -6,8 +6,8 @@ function Footer() {
     return (
         <footer className="bg-dark py-4 footer-border-gradient">
             <Container>
-                <p className="text-white m-0">
-                    <strong>Esteban Demarchi | Curso React CoderHouse 2021</strong>
+                <p className="text-white m-0 text-center">
+                    <strong>Esteban Demarchi</strong> | Curso React CoderHouse 2021
                 </p>
             </Container>
         </footer>
