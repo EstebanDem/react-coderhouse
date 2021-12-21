@@ -1,5 +1,5 @@
 .footer-border-gradient {
     border-top-style: solid;
     border-top-width: 4px;
-    border-image: linear-gradient(45deg, rgb(66 195 250),rgb(0 255 185)) 1;
+    border-image: linear-gradient(45deg, rgb(255 252 249),rgb(238 203 0)) 1;
 }

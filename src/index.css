@@ -28,7 +28,7 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #0fc2fef5, #3ec7f6);
+  background: linear-gradient(45deg, #eecb00, #ffde1b);
 }
 
 /* Handle on hover */

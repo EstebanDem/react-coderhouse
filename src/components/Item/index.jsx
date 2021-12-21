@@ -13,7 +13,7 @@ const Item = ({item}) => (
                 <Card.Text>{item.description} </Card.Text>
                 <Card.Text>$ {item.price}</Card.Text>
             </Card.Body>
-            <Card.Footer className="footer-card">
+            <Card.Footer>
                 <small className="text-muted">Last upd</small>
             </Card.Footer>
         </Card>
