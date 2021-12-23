@@ -17,6 +17,7 @@ React Bootstrap
 
 ## Preview (isn't finish yet)
 
+![me](https://github.com/EstebanDem/react-coderhouse/blob/master/preview.gif)
 
 
 # Getting Started with Create React App
