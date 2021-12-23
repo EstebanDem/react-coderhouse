@@ -1,0 +1,17 @@
+.CategoryItem__image {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.CategoryItem__image:hover {
+    -webkit-filter: none !important;
+    filter: none !important;
+    transition: 0.5s;
+}
+
+.CategoryItem__BorderAndShadow {
+  box-shadow: 0px 5px 9px #b0b0b0;
+  outline: 4px solid white;
+  margin-top:0.5rem;
+}

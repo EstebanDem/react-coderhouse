@@ -5,18 +5,22 @@ import './NavBar.css'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import {NavLink} from 'react-router-dom';
+import { IoMusicalNote } from "react-icons/io5";
 
 const NavBar = () => (
     <>
         <Navbar className="nav-border-gradient lead" bg="dark" variant="dark" sticky="top" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">E-Commerce</Navbar.Brand>
+            <Navbar.Brand as={NavLink} exact to="/">
+                <IoMusicalNote/>
+                <strong>e-Must</strong> Albums
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home">Inicio</Nav.Link>
-                <Nav.Link href="#link1">Productos</Nav.Link>
-                <Nav.Link href="#link2">Categorias</Nav.Link>
+                <Nav.Link as={NavLink} exact to="/">Productos</Nav.Link>
+                <Nav.Link as={NavLink} exact to="/categorias">Categorias</Nav.Link>
             </Nav>
             <Nav>
                 <Nav.Link href="#">

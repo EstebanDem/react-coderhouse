@@ -1,3 +1,24 @@
+# e-Must Albums
+
+It is an e-commerce site dedicated to the sale of albums that I think every person should listen to once in their life
+
+## Dependencies
+
+**For UI components and styles:**
+React Bootstrap
+
+`npm install react-bootstrap bootstrap@5.1.3
+`
+
+**For Icons**: React Icons
+
+`npm install react-icons --save
+`
+
+## Preview (isn't finish yet)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
