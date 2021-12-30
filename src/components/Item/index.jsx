@@ -21,7 +21,7 @@ const Item = ({item}) => (
             </Card.Body>
             <Card.Footer className="text-muted Item__link" as={NavLink} to={`/discos/${item.id}`}>
                 <IoArrowRedoCircleOutline/>
-                <small >Ver detalles</small>
+                <small className="text-black"> Ver detalles</small>
             </Card.Footer>
         </Card>
     </Col>
