@@ -1,4 +1,3 @@
-// esto va a mapear los productos y devolver un item por cada uno
 import Item from '../Item';
 import Row from 'react-bootstrap/esm/Row';
 const ItemList = ({items}) => {

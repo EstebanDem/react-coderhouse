@@ -1,16 +1,13 @@
 import React from 'react';
 import CartWidget from '../CartWidget.js/CartWidget';
 import './NavBar.css'
-/* Bootstrap */
+import {NavLink} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {NavLink} from 'react-router-dom';
 import MockedCategories from '../../mock/MockedCategories';
 import { IoMusicalNote } from "react-icons/io5";
-
-// to={`/discos/${item.id}`}
 
 const NavBar = () => (
     <>

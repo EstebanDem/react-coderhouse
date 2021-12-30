@@ -1,9 +1,3 @@
-// llamada a la api, o la promesa (en este caso)
-// manejo de estados
-
-// vamos a traer 1 itemList.-
-// ese itemList va a mapear item, y devolverlos como lista.
-
 import { useEffect, useState } from "react";
 import MockedCategories from "../../mock/MockedCategories";
 import Container from "react-bootstrap/esm/Container";
