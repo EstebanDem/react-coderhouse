@@ -5,8 +5,12 @@ import './NavBar.css'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import {NavLink} from 'react-router-dom';
+import MockedCategories from '../../mock/MockedCategories';
 import { IoMusicalNote } from "react-icons/io5";
+
+// to={`/discos/${item.id}`}
 
 const NavBar = () => (
     <>
@@ -20,7 +24,17 @@ const NavBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link as={NavLink} exact to="/">Productos</Nav.Link>
-                <Nav.Link as={NavLink} exact to="/categorias">Categorias</Nav.Link>
+                <NavDropdown  title="Categorias">
+                    {MockedCategories.map( (mockedCategory,index) => {
+                        return (
+                            <NavDropdown.Item as={NavLink} to={`/categorias/${mockedCategory.id}`} >
+                                {mockedCategory.name}
+                            </NavDropdown.Item>
+                        )
+                    } )}
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item as={NavLink} exact to="/categorias">Ver todas</NavDropdown.Item>
+                </NavDropdown>
             </Nav>
             <Nav>
                 <Nav.Link href="#">
