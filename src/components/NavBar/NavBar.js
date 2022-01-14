@@ -34,7 +34,7 @@ const NavBar = () => (
                 </NavDropdown>
             </Nav>
             <Nav>
-                <Nav.Link href="#">
+                <Nav.Link as={NavLink} to='/cart'>
                     <CartWidget/>
                 </Nav.Link>
             </Nav>

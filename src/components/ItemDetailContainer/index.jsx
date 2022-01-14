@@ -31,7 +31,7 @@ const ItemDetailContainer = ( () => {
 
     }, [itemId])
 
-    console.log(product);
+    
 
     return loading 
         ? <LoaderSpinner/>
