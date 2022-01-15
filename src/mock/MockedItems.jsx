@@ -81,7 +81,7 @@ const MockedItems = [
     },
     {
         id: "7",
-        title: 'Producto 7',
+        title: 'Jar of Flies',
         artist: 'Alice In Chains',
         category: 'Rock Grunge',
         categoryId: "4",
@@ -133,7 +133,7 @@ const MockedItems = [
     },
     {
         id: "11",
-        title: 'Producto 11',
+        title: 'The Velvet Underground & Nico',
         artist: 'The Velvet Underground',
         category: 'Rock Experimental',
         categoryId: "3",
