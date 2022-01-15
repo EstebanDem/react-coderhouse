@@ -5,16 +5,27 @@ import { NavLink } from 'react-router-dom';
 import Button from "react-bootstrap/esm/Button";
 import Container from 'react-bootstrap/esm/Container';
 import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
+import Lottie from 'react-lottie';
+import animationData from '../../animations/85557-empty'
 
 const Cart = () => {
 
     const { cart, clearCart, cartWidgetItems, totalPrice } = useCartContext();
     const total = totalPrice();
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+        }
+      };
+
     return(
         <>
             <Container className="mt-4 mb-4">
-                <h4>Esta sería la parte donde está el carrito</h4>
                 {cartWidgetItems() > 0 ? (
                     cart.map((i) => (
                         <>
@@ -31,9 +42,18 @@ const Cart = () => {
                     ))
                 ) : (
                     <>
-                        <h3>
-                            No hay nada.
-                        </h3>
+                        <Row className="justify-content-md-center my-4">
+                            <Col xs lg="6" className="text-center mb-4">
+                                <h4>
+                                    Parece que aún no has elegido nada 😔
+                                </h4>
+                                <Lottie 
+                                    options={defaultOptions}
+                                    
+                                    width={250}
+                                />
+                            </Col>
+                        </Row>
                     </>
                 )}
                 {cartWidgetItems()>0 && (

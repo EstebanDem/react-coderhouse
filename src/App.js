@@ -7,6 +7,7 @@ import CategoryListContainer from './containers/CategoryListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
+import NotFound404 from './components/NotFound404';
 
 const App = () => {
   
@@ -37,6 +38,10 @@ const App = () => {
 
             <Route path='/cart'>
               <Cart/>
+            </Route>
+
+            <Route>
+              <NotFound404/>
             </Route>
 
           </Switch>
