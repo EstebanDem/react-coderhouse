@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/esm/Button";
-import ButtonGroup from 'react-bootstrap/esm/ButtonGroup'
+import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const ItemCount = ({stock, onAdd}) => {
@@ -31,9 +32,17 @@ const ItemCount = ({stock, onAdd}) => {
             </ButtonGroup>
             <br></br>
             <br></br>
-            <Button onClick={handleOnAdd} variant='primary'>
-                Agregar al carrito
-            </Button>
+            {display === "block" ? (
+                <ButtonGroup vertical>
+                    <Button variant="secondary" as={NavLink} to="/cart">Ir al carrito</Button>
+                    <Button variant="secondary" as={NavLink} to="/">Ver más discos</Button>
+                </ButtonGroup>
+            ): (
+                <Button onClick={handleOnAdd} variant='primary'>
+                    Agregar al carrito
+                </Button>
+            )}
+            
         </>
 
       )
