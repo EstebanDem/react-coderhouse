@@ -4,7 +4,18 @@ import { useEffect } from "react";
 import MockedItems from "../../mock/MockedItems";
 import ItemDetail from "../ItemDetail";
 import LoaderSpinner from "../LoaderSpinner";
+import { getFirestore } from "../../firebase";
 
+
+/* setLoading(false);
+        const bd = getFirestore();
+        const itemsCollection = bd.collection("items");
+        itemsCollection.get().then( (value) => {
+            let datos = value.docs.map( (e) => {
+                return {...e.data(), id: e.id};
+            });
+            setItems(datos);
+        }); */
 
 const ItemDetailContainer = ( () => {
 
@@ -14,9 +25,20 @@ const ItemDetailContainer = ( () => {
     const { itemId } = useParams();
 
     useEffect( () => {
-        setLoading(true);
+        setLoading(false);
 
-        const getProducts = new Promise( (resolve) => {
+        const bd = getFirestore();
+        const itemsCollection = bd.collection("albums");
+        itemsCollection.get().then( (value) => {
+            let datos = value.docs.map( (e) => {
+                return {...e.data(), id: e.id};
+        });
+            const found = datos.find( (item) => item.id === itemId)
+            setProduct(found);
+        });
+
+
+        /* const getProducts = new Promise( (resolve) => {
             setTimeout( () => {
                 const myData = MockedItems.find( (item) => item.id === itemId );
                 resolve(myData);
@@ -27,7 +49,7 @@ const ItemDetailContainer = ( () => {
             .then((res) => {
                 setProduct(res)
             })
-            .finally(() => setLoading(false))
+            .finally(() => setLoading(false)) */
 
     }, [itemId])
 

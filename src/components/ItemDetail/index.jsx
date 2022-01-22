@@ -6,7 +6,6 @@ import './styles.css';
 import { IoPeople, IoMusicalNotesSharp, IoPulseOutline, IoPricetag } from "react-icons/io5";
 import ItemCount from '../ItemCount';
 import { useCartContext } from '../../context/CartContext';
-import Notification from '../Notification';
 
 const ItemDetail = ({ item }) => {
 

@@ -6,6 +6,7 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import { useParams } from "react-router-dom";
 import LoaderSpinner from "../../components/LoaderSpinner";
+import { getFirestore } from "../../firebase";
 
 const ItemListContainer = () => {
 
@@ -14,28 +15,20 @@ const ItemListContainer = () => {
     const { catId } = useParams();
 
     useEffect( () => {
-
-        setLoading(true);
-
-        const itemPromise = new Promise((res, rej) => {
-            
-            setTimeout( () => {
-                const myData = catId
-                ? MockedItems.filter( (item)  => item.categoryId === catId)
-                : MockedItems;
-                
-                
-                res(myData);
-            }, 1000)
-        })
-        
-        itemPromise
-            .then((res) => {
-                setItems(res)  
-            })
-            .finally( () => setLoading(false));
-         
-
+        setLoading(false);
+        const bd = getFirestore();
+        const itemsCollection = bd.collection("albums");
+        itemsCollection.get().then( (value) => {
+            let datos = value.docs.map( (e) => {
+                return {...e.data(), id: e.id};
+            });
+            console.log(datos);
+            const datosFiltrados = catId
+             ? datos.filter( (item) => item.categoryId === catId)
+             : datos;
+            console.log(datosFiltrados);
+            setItems(datosFiltrados);
+        });
     }, [catId]);
 
 
