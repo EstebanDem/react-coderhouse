@@ -1,8 +1,8 @@
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './containers/ItemListContainer';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer'
 import CategoryListContainer from './containers/CategoryListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';

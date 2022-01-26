@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './styles.css';
 import Container from 'react-bootstrap/esm/Container';
 
 

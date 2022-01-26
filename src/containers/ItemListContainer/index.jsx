@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MockedItems from "../../mock/MockedItems";
 import ItemList from "../../components/ItemList";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import MockedItems from "../../mock/MockedItems";
 import ItemDetail from "../ItemDetail";
 import LoaderSpinner from "../LoaderSpinner";
 import { getFirestore } from "../../firebase";
