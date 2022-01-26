@@ -15,20 +15,18 @@ const ItemListContainer = () => {
     const { catId } = useParams();
 
     useEffect( () => {
-        setLoading(false);
         const bd = getFirestore();
         const itemsCollection = bd.collection("albums");
         itemsCollection.get().then( (value) => {
             let datos = value.docs.map( (e) => {
                 return {...e.data(), id: e.id};
             });
-            console.log(datos);
             const datosFiltrados = catId
              ? datos.filter( (item) => item.categoryId === catId)
              : datos;
-            console.log(datosFiltrados);
             setItems(datosFiltrados);
         });
+        setLoading(false);
     }, [catId]);
 
 

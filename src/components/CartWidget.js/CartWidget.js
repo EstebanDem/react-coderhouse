@@ -13,7 +13,7 @@ const CartWidget = () => {
             {cartWidgetItems()>0 ? (
                     <>  
                         {' '}
-                        <Badge bg="secondary">{cartWidgetItems()}</Badge>
+                        <Badge bg="warning">{cartWidgetItems()}</Badge>
                     </>
                 ) : (
                     null

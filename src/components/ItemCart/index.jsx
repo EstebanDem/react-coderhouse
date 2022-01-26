@@ -1,29 +1,22 @@
 import { useCartContext } from "../../context/CartContext";
-import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
-
-//<Row xs lg="8" className="justify-content-md-center">
+import Button from "react-bootstrap/esm/Button";
+import { IoRemoveCircleOutline } from "react-icons/io5";
 
 const ItemCart = ( { name, price, url, id, quantity}) => {
     const { removeItem } = useCartContext();
     const handleRemove = () => removeItem(id);
-    console.log("EL ID ES")
-    console.log(id);
     return(
         <>  
-            <Row xs={2} md={4} lg={6}>
-                <Col xs lg="6">
-                    <h3>Nombre del disco: {name}</h3>
-                    <h3>Precio{price}</h3>
-                    <h3>Cantidad {quantity}</h3>
-                </Col>
-                <Col xs lg="2">
-                    <button onClick={handleRemove}>
-                        Remover!!
-                    </button>
-                </Col>
-            </Row>
-            <hr/>
+            <tr>
+                <td>{name}</td>
+                <td>{'$'}{price}</td>
+                <td>{quantity}</td>
+                <td>
+                    <Button variant="warning" onClick={handleRemove}>
+                        <IoRemoveCircleOutline/>
+                    </Button>
+                </td>
+            </tr>
         </>
     )
 }

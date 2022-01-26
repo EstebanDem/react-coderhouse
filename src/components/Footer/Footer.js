@@ -1,6 +1,8 @@
-import React from 'react'
-import './Footer.css'
-import Container from 'react-bootstrap/esm/Container'
+import React from 'react';
+import './Footer.css';
+import Container from 'react-bootstrap/esm/Container';
+
+
 
 function Footer() {
     return (

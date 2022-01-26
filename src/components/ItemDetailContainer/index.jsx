@@ -7,16 +7,6 @@ import LoaderSpinner from "../LoaderSpinner";
 import { getFirestore } from "../../firebase";
 
 
-/* setLoading(false);
-        const bd = getFirestore();
-        const itemsCollection = bd.collection("items");
-        itemsCollection.get().then( (value) => {
-            let datos = value.docs.map( (e) => {
-                return {...e.data(), id: e.id};
-            });
-            setItems(datos);
-        }); */
-
 const ItemDetailContainer = ( () => {
 
     const [loading, setLoading] = useState(true);
@@ -37,19 +27,6 @@ const ItemDetailContainer = ( () => {
             setProduct(found);
         });
 
-
-        /* const getProducts = new Promise( (resolve) => {
-            setTimeout( () => {
-                const myData = MockedItems.find( (item) => item.id === itemId );
-                resolve(myData);
-            }, 1500)
-        })
-
-        getProducts
-            .then((res) => {
-                setProduct(res)
-            })
-            .finally(() => setLoading(false)) */
 
     }, [itemId])
 

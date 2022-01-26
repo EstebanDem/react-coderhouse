@@ -1,12 +1,9 @@
 import React, { useContext, createContext, useState } from "react";
 
-//creacion del contexto
 const CartContext = createContext();
 
-//funcion para ahorrarme dos importaciones
 export const useCartContext = () => useContext(CartContext);
 
-//Inyectar los estados y funciones globales, enmascaro provider
 export const CartContextProvider = ({ children }) => {
   let variable = "desde context";
   const [cart, setCart] = useState([]);
@@ -31,10 +28,9 @@ export const CartContextProvider = ({ children }) => {
     setCart([...deleteProduct]);
   };
 
-  //[1,2,3,4] acum = 0 => 1, 1+2 => 3+3
   const cartWidgetItems = () => {
     return cart.reduce((acum, valor) => acum + valor.quantity, 0);
-    // return cart.length;
+
   };
 
   const totalPrice = () => {

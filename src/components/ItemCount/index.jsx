@@ -2,6 +2,7 @@ import Button from "react-bootstrap/esm/Button";
 import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { IoCartOutline, IoAlbumsOutline } from "react-icons/io5";
 
 const ItemCount = ({stock, onAdd}) => {
 
@@ -26,20 +27,24 @@ const ItemCount = ({stock, onAdd}) => {
     return (
         <>
             <ButtonGroup aria-label="Basic example">
-                <Button onClick={handleClickRemove} variant="secondary">-</Button>
-                <Button disabled variant="secondary">{count}</Button>
-                <Button onClick={handleClickAdd} variant="secondary">+</Button>
+                <Button onClick={handleClickRemove} variant="warning">-</Button>
+                <Button disabled variant="warning">{count}</Button>
+                <Button onClick={handleClickAdd} variant="warning">+</Button>
             </ButtonGroup>
             <br></br>
             <br></br>
             {display === "block" ? (
                 <ButtonGroup vertical>
-                    <Button variant="secondary" as={NavLink} to="/cart">Ir al carrito</Button>
-                    <Button variant="secondary" as={NavLink} to="/">Ver más discos</Button>
+                    <Button variant="warning" as={NavLink} to="/cart">
+                    <IoCartOutline/> Ir al carrito
+                    </Button>
+                    <Button variant="warning" as={NavLink} to="/">
+                        <IoAlbumsOutline/>Ver más discos
+                    </Button>
                 </ButtonGroup>
             ): (
-                <Button onClick={handleOnAdd} variant='primary'>
-                    Agregar al carrito
+                <Button onClick={handleOnAdd} variant='warning'>
+                    <IoCartOutline/> Agregar al carrito
                 </Button>
             )}
             
