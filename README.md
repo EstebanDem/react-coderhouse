@@ -15,7 +15,7 @@ React Bootstrap
 `npm install react-icons --save
 `
 
-## Preview (isn't finish yet)
+## Preview 
 
 ![me](https://github.com/EstebanDem/react-coderhouse/blob/master/preview.gif)
 

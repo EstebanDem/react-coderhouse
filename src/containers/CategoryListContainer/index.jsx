@@ -24,7 +24,7 @@ const CategoryListContainer = () => {
                 .finally( () => setLoading(false))
                 
     
-        }, 1000)
+        }, 300)
         
     }, [items]);
 
