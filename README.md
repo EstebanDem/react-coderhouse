@@ -15,6 +15,10 @@ React Bootstrap
 `npm install react-icons --save
 `
 
+**Animations**: React lottie
+
+`npm i react-lottie
+`
 ## Preview 
 
 ![me](https://github.com/EstebanDem/react-coderhouse/blob/master/preview.gif)
